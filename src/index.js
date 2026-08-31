@@ -1,3 +1,4 @@
+// Cloudflare Worker entrypoint — handles chat requests via Workers AI.
 export default {
   async fetch(request, env) {
     // Anyone who finds this URL can spend your Workers AI quota, so require
