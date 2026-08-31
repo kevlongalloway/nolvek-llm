@@ -1,0 +1,16 @@
+name = "nolvek-llm"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Workers AI binding — this is what makes `env.AI` available in the Worker.
+[ai]
+binding = "AI"
+
+# MODEL and SHARED_KEY are configured as Variables/Secrets in the Cloudflare
+# dashboard (Worker > Settings > Variables and Secrets), so they aren't
+# duplicated here. If you ever want them tracked in source instead, add:
+#
+# [vars]
+# MODEL = "@cf/meta/llama-3.1-8b-instruct"
+#
+# and set SHARED_KEY as a secret via `wrangler secret put SHARED_KEY`.
